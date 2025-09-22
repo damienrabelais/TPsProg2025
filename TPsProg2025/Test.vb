@@ -1,21 +1,31 @@
 ﻿Module Test
-
     Sub Main()
-        Dim n As Integer
-        Dim compteur As Double
-        ' Saisir avant de rentrer (ou non) dans la boucle !
-        'Console.WriteLine("Entrez un nombre (0 pour fin) : ")
-        'n = Console.ReadLine()
-        n = 1
-        While n <> 0   ' boucle de saisie des nombres
-            'Console.WriteLine("Le carré vaut : " + (n * n).ToString)
-            compteur = compteur + 1
-            Console.WriteLine(compteur)
-            'Console.WriteLine("Entrez un nombre (0 pour fin) : ")
-            'n = Console.ReadLine()
-        End While
-        Console.WriteLine("n  = 0, au revoir")
-        Console.ReadLine()
-    End Sub
+        Dim choix As Integer
+        Do
+            Console.WriteLine("1. Travailler")
+            Console.WriteLine("2. Parler avec son voisin")
+            Console.WriteLine("3. Se reposer")
+            Console.WriteLine("4. Dormir")
+            Console.WriteLine("5. Quitter")
+            Console.WriteLine("Saisissez votre choix")
+            choix = Console.ReadLine()
+            Select Case choix
+                Case 1
+                    Console.WriteLine("Continuez !")
+                Case 2
+                    Console.WriteLine("Il faut vous reconcentrer !")
+                Case 3
+                    Console.WriteLine("Ce n'est pas le moment.")
+                Case 4
+                    Console.WriteLine("Debout !")
+                Case 5
+                    Console.WriteLine("Au revoir.")
+                Case Else
+                    Console.WriteLine("Erreur de saisie.")
+            End Select
 
+        Loop Until choix = 5
+        Console.ReadLine()
+
+    End Sub
 End Module
