@@ -1,31 +1,47 @@
 ﻿Module Test
-    Sub Main()
+
+    Function PérimètreCercle(ByVal pRayon As Double) As Double
+        Dim perimetre As Double
+        perimetre = 2 * Math.PI * pRayon
+        Return perimetre
+        'Return 2 * Math.PI * pRayon
+    End Function
+
+
+
+    Sub Main() ' Programme principal
         Dim choix As Integer
+        Dim rayon As Double
         Do
-            Console.WriteLine("1. Travailler")
-            Console.WriteLine("2. Parler avec son voisin")
-            Console.WriteLine("3. Se reposer")
-            Console.WriteLine("4. Dormir")
-            Console.WriteLine("5. Quitter")
-            Console.WriteLine("Saisissez votre choix")
+            Console.WriteLine("1. Calcul du périmètre d'un cercle.")
+            Console.WriteLine("2. Calcul de la surface d'un cercle.")
+            Console.WriteLine("3. Calcul du périmètre d'un rectangle.")
+            Console.WriteLine("4. Calcul de la surface d'un rectangle.")
+            Console.WriteLine("5. Quitter.")
+            Console.WriteLine("Choix ?")
             choix = Console.ReadLine()
+
             Select Case choix
                 Case 1
-                    Console.WriteLine("Continuez !")
+                    Console.WriteLine("1. Calcul du périmètre d'un cercle.")
+                    Do
+                        Console.WriteLine("Rayon ?")
+                        rayon = Console.ReadLine()
+                        If rayon <= 0 Then
+                            Console.WriteLine("Rayon > 0")
+                        End If
+                    Loop Until rayon > 0
+                    Console.WriteLine("Périmètre: " + PérimètreCercle(rayon).ToString())
                 Case 2
-                    Console.WriteLine("Il faut vous reconcentrer !")
-                Case 3
-                    Console.WriteLine("Ce n'est pas le moment.")
-                Case 4
-                    Console.WriteLine("Debout !")
+                    Console.WriteLine("2. Calcul de la surface d'un cercle.")
                 Case 5
-                    Console.WriteLine("Au revoir.")
+                    Console.WriteLine("Au revoir")
                 Case Else
-                    Console.WriteLine("Erreur de saisie.")
+                    Console.WriteLine("Erreur de saisie")
             End Select
-
         Loop Until choix = 5
-        Console.ReadLine()
 
-    End Sub
+
+        Console.ReadLine()
+    End Sub ' Fin du main
 End Module
