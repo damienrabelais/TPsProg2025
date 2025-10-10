@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B9A45CC2-2379-4ADB-A843-CC73207D4625}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>TPsProg2025.TP11_3</StartupObject>
+    <StartupObject>TPsProg2025.TP11_4</StartupObject>
     <RootNamespace>TPsProg2025</RootNamespace>
     <AssemblyName>TPsProg2025</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -87,6 +87,7 @@
     <Compile Include="TP11_1.vb" />
     <Compile Include="TP11_2.vb" />
     <Compile Include="TP11_3.vb" />
+    <Compile Include="TP11_4.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
